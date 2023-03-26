@@ -1,0 +1,18 @@
+.heder{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+div .heder a{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+}
+div .heder a:hover{
+    color: coral;
+}
