@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Prodcut from '../Product/Prodcut';
 import './Shop.css'
 const Shop = () => {
     const [products , setProducts] = useState([])
+
        const [Chart ,setChart] = useState([])
     useEffect(()=>{
         fetch('products.json')
@@ -10,12 +12,14 @@ const Shop = () => {
         .then(data =>setProducts(data))
     },[])
     const handelAddto = (product)=>{
-        console.log(product)
-        const newChart = [... Chart ,product]
+        // console.log(product)
+        // console.log(Chart)
+         const newChart = [...Chart ,product]
          //   const newCart = [...Chart , product]
-             setChart(newChart)
-    }
-
+        //  console.log(newChart)
+              setChart(newChart)
+            }
+            
     return (
         <div className='shping-container'>
             <div className="product-countainer">
@@ -27,8 +31,7 @@ const Shop = () => {
                   }
             </div>
             <div className="cart-container">
-                <h1>Oder </h1>
-                <p>add to cart : {Chart}</p>
+                <Cart Chart={Chart}></Cart>
             </div>
         </div>
     );

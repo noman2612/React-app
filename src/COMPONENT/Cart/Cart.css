@@ -1,0 +1,7 @@
+.Cart-cont{
+    background: rgba(255, 153, 0, 0.3);
+    padding: 23px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
