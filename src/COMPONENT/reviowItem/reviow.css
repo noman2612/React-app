@@ -4,5 +4,50 @@
     border-radius: 10px;
     margin-bottom: 25px;
     padding: 8px;
-    height: 107px;
+    padding: 8px 25px 8px 8px;
+    display: flex;
+    align-items: center;
+}
+.revowItem img{
+     height: 91px;
+     width: 91px;
+     border-radius: 8px;
+}
+
+.revowItem .name-product{
+    font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 25px;
+letter-spacing: 0.0015em;
+}
+.review-info p{
+margin:0 15px;
+}
+.review-info{
+    flex-grow: 1;
+}
+.text-org{
+  color: coral;
+}
+.btn-delete{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color:rgba(235, 87, 87, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delead-icon{
+    color: darksalmon;
+    font-size: 25px;
+}
+.delead-icon :hover{
+color:red;
+
+}
+.btn-delete :hover{
+    height: 80px;
+    width: 80px;
 }
