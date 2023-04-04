@@ -1,0 +1,8 @@
+.revowItem{
+    width: 571px;
+    border: 1px solid grey; 
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 8px;
+    height: 107px;
+}

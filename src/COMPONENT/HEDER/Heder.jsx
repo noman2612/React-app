@@ -1,15 +1,16 @@
 import React from 'react';
 import logo from '../../images/Logo.svg'
 import './Heder.css'
+import { Link } from 'react-router-dom';
 const Heder = () => {
     return (
         <div className='heder'>
             <img src={logo} alt="" />
             <div>
-                <a href=""> Order </a>
-                <a href="">Order Review </a>
-                <a href="" > Manage Inventory</a>
-                 <a href="">Login</a>
+                <Link to="/"> Shop </Link>
+                <Link to="/Order-Review">Order Review </Link>
+                <Link to="/Manage-Inventory" > Manage Inventory</Link>
+                 <Link to="/Login">Login</Link>
             </div>
         </div>
     );

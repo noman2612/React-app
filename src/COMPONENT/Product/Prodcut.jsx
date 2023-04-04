@@ -9,7 +9,7 @@ const Prodcut = (props) => {
     const handelAddto = props.handelAddto
     return (
         <div className='product'>
-            <h1><img src={img} alt="" /> </h1>
+            <img src={img} alt="" /> 
             <div className='product-info'>
                 <h6 className='product-name'> {name}</h6>
                 <p>price ${price}</p>
