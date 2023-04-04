@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import { useLoaderData } from 'react-router-dom';
 import ReviowItem from '../reviowItem/ReviowItem';
 import'./oder.css'
-import { removeFromDb } from '../../utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 const Oders = () => {
     const CartProduct = useLoaderData()
     const [cart,setCart] = useState(CartProduct)
@@ -12,7 +12,10 @@ const Oders = () => {
         const DeleadProduct = cart.filter(pd=>pd.id !==id)
         setCart(DeleadProduct)
           removeFromDb(id)
-
+    }
+    const heldalClearCart =() =>{
+        setCart([])
+        deleteShoppingCart()
     }
     return (
         <div className='shping-container'>
@@ -24,7 +27,9 @@ const Oders = () => {
            ></ReviowItem>)}
            </div>
            <div className='cart-container'>
-           <Cart Chart={cart}></Cart>
+           <Cart Chart={cart}
+           heldalClearCart={heldalClearCart}
+           ></Cart>
            </div>
         </div>
     );

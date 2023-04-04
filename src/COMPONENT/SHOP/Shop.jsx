@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Prodcut from '../Product/Prodcut';
 import './Shop.css'
 const Shop = () => {
+    const heldalClearCart = ()=>{
+        setChart([])
+        deleteShoppingCart();
+    }
     const [products , setProducts] = useState([])
 
        const [Chart ,setChart] = useState([])
@@ -46,7 +50,10 @@ const Shop = () => {
                   }
             </div>
             <div className="cart-container">
-                <Cart Chart={Chart}></Cart>
+                <Cart Chart={Chart}
+                heldalClearCart={heldalClearCart}
+                
+                ></Cart>
             </div>
         </div>
     );

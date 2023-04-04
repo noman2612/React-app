@@ -5,3 +5,14 @@
     position: sticky;
     top: 0;
 }
+.btn-clear{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+    background: red;
+    color: aliceblue;
+    height: 56px;
+    font-size: 18px;
+}
