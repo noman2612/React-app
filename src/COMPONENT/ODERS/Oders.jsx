@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ReviowItem from '../reviowItem/ReviowItem';
 import'./oder.css'
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import {faSave } from '@fortawesome/free-solid-svg-icons'
+
 const Oders = () => {
     const CartProduct = useLoaderData()
     const [cart,setCart] = useState(CartProduct)
@@ -29,7 +32,12 @@ const Oders = () => {
            <div className='cart-container'>
            <Cart Chart={cart}
            heldalClearCart={heldalClearCart}
-           ></Cart>
+           >
+             <Link to="/checkout">
+                            <button className='the-checkout-btn'><samp>Proceed Checkout </samp>
+                            <FontAwesomeIcon icon={faSave} /></button>
+                        </Link>
+           </Cart>
            </div>
         </div>
     );

@@ -9,3 +9,14 @@
     grid-template-columns: repeat(3,1fr);
     gap: 40px;
 }
+.the-checkout-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+    background: orange;
+    color: aliceblue;
+    height: 56px;
+    font-size: 18px;
+}

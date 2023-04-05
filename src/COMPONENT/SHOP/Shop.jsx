@@ -3,6 +3,10 @@ import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fa
 import Cart from '../Cart/Cart';
 import Prodcut from '../Product/Prodcut';
 import './Shop.css'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faRightLong } from '@fortawesome/free-solid-svg-icons'
+
 const Shop = () => {
     const heldalClearCart = ()=>{
         setChart([])
@@ -53,7 +57,15 @@ const Shop = () => {
                 <Cart Chart={Chart}
                 heldalClearCart={heldalClearCart}
                 
-                ></Cart>
+                >
+                    <div>
+                        <Link className='' to="/Order-Review">
+                            <button className='the-checkout-btn'><samp>Review Order</samp>
+                            <FontAwesomeIcon icon={faRightLong} />
+                            </button>
+                        </Link>
+                    </div>
+                </Cart>
             </div>
         </div>
     );
