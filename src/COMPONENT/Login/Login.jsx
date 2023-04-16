@@ -2,19 +2,29 @@ import React, { useContext } from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+
 const Login = () => {
     const {LogUser} = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location =useLocation()
+    const from = location.state?.from?.pathname||'/'
+    console.log(location)
     const handelLogin =(e)=>{
+
         event.preventDefault()
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
+        form.reset
         console.log(email,password,)
         LogUser(email,password)
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
           console.log(user)
+          navigate(from,{replace:true})
           // ...
         })
         .catch((error) => {

@@ -16,3 +16,7 @@ div .heder a{
 div .heder a:hover{
     color: coral;
 }
+.text-w{
+    color: aliceblue;
+    padding: 5px;
+}

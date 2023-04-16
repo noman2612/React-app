@@ -13,6 +13,7 @@ const SignUp = () => {
             const password = form.password.value;
             const confirm = form.confirm.value
             console.log(email,password,confirm)
+            form.reset()
             signUser(email,password)
             .then((userCredential) => {
               // Signed in 

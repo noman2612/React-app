@@ -24,14 +24,14 @@ const Heder = () => {
         <Link to="/Manage-Inventory"> Manage Inventory</Link>
         <Link to="/Login">Login</Link>
         <Link to="/SignUp">signUp</Link>
-        <p>
+        
           {user && (
             <>
-              <small>{user.email}</small>
+              <small className="text-w">{user.email}</small>
               <button onClick={handleLogout}>logOut</button>
             </>
           )}
-        </p>
+        
       </div>
     </div>
   );
